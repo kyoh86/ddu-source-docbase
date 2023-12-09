@@ -1,12 +1,12 @@
-import type { GatherArguments } from "https://deno.land/x/ddu_vim@v3.6.0/base/source.ts";
+import type { GatherArguments } from "https://deno.land/x/ddu_vim@v3.8.1/base/source.ts";
 import type { ActionData as FileActionData } from "https://deno.land/x/ddu_kind_file@v0.7.1/file.ts";
-import type { Item } from "https://deno.land/x/ddu_vim@v3.6.0/types.ts";
-import { BaseSource } from "https://deno.land/x/ddu_vim@v3.6.0/types.ts";
+import type { Item } from "https://deno.land/x/ddu_vim@v3.8.1/types.ts";
+import { BaseSource } from "https://deno.land/x/ddu_vim@v3.8.1/types.ts";
 import {
   isPost,
   Post,
 } from "https://denopkg.com/kyoh86/denops-docbase.vim@master/denops/docbase/types.ts";
-import { ensure, is } from "https://deno.land/x/unknownutil@v3.10.0/mod.ts";
+import { ensure, is } from "https://deno.land/x/unknownutil@v3.11.0/mod.ts";
 
 type ActionData = FileActionData & Post;
 
