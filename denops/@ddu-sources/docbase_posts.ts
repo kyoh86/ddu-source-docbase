@@ -6,7 +6,7 @@ import {
   isPost,
   Post,
 } from "https://denopkg.com/kyoh86/denops-docbase.vim@master/denops/docbase/types.ts";
-import { ensure, is } from "https://deno.land/x/unknownutil@v3.14.1/mod.ts";
+import { ensure, is } from "https://deno.land/x/unknownutil@v3.16.0/mod.ts";
 
 type ActionData = FileActionData & Post;
 
