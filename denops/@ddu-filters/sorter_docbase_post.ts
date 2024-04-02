@@ -33,9 +33,9 @@ export class Filter extends BaseFilter<Params> {
       const fieldA = postA[filterParams.field];
       const fieldB = postB[filterParams.field];
       if (fieldA < fieldB) {
-        return -1;
+        return filterParams.order == "desc" ? 1 : -1;
       } else if (fieldA > fieldB) {
-        return 1;
+        return filterParams.order == "desc" ? -1 : 1;
       }
       return 0;
     }));
