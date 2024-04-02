@@ -14,7 +14,7 @@ type Params = {
   domain: string;
   per_page: number;
   max_page: number;
-  query?: string;
+  query: string;
 };
 
 export class Source extends BaseSource<Params, ActionData> {
@@ -68,6 +68,6 @@ export class Source extends BaseSource<Params, ActionData> {
   }
 
   override params(): Params {
-    return { domain: "", max_page: 5, per_page: 100 };
+    return { domain: "", max_page: 5, per_page: 100, query: "desc:changed_at" };
   }
 }
