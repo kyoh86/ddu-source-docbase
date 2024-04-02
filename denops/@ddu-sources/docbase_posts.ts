@@ -5,7 +5,7 @@ import { BaseSource } from "https://deno.land/x/ddu_vim@v3.10.3/types.ts";
 import {
   isPost,
   Post,
-} from "https://denopkg.com/kyoh86/denops-docbase.vim@master/denops/docbase/types.ts";
+} from "https://denopkg.com/kyoh86/denops-docbase.vim@main/denops/docbase/types.ts";
 import { ensure, is } from "https://deno.land/x/unknownutil@v3.17.0/mod.ts";
 
 type ActionData = FileActionData & Post;
