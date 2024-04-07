@@ -6,7 +6,7 @@ import {
   isPost,
   Post,
 } from "https://denopkg.com/kyoh86/denops-docbase.vim@main/denops/docbase/types.ts";
-import { ensure } from "https://deno.land/x/unknownutil@v3.17.0/mod.ts";
+import { ensure } from "https://deno.land/x/unknownutil@v3.17.2/mod.ts";
 
 type Params = {
   field: keyof Pick<
