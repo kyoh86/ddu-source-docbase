@@ -32,8 +32,8 @@ export class Source extends BaseSource<Params, ActionData> {
               const res = await args.denops.dispatch(
                 "docbase",
                 "searchPosts",
-                args.sourceParams.domain,
                 {
+                  domain: args.sourceParams.domain,
                   q: args.sourceParams.query,
                   page,
                   per_page: args.sourceParams.per_page,
@@ -51,7 +51,7 @@ export class Source extends BaseSource<Params, ActionData> {
                   action: {
                     ...p,
                     path:
-                      `docbase://teams/${args.sourceParams.domain}/posts/${p.id}`,
+                      `docbase://post;domain=${args.sourceParams.domain}&postId=${p.id}`,
                     url:
                       `https://${args.sourceParams.domain}.docbase.io/posts/${p.id}`,
                   },
