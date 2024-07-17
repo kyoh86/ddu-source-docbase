@@ -1,7 +1,7 @@
 import {
   BaseFilter,
   DduItem,
-} from "https://deno.land/x/ddu_vim@v4.1.1/types.ts";
+} from "https://deno.land/x/ddu_vim@v4.2.0/types.ts";
 import {
   isPost,
   Post,
