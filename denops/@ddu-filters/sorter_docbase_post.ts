@@ -1,12 +1,6 @@
-import {
-  BaseFilter,
-  DduItem,
-} from "https://deno.land/x/ddu_vim@v4.1.1/types.ts";
-import {
-  isPost,
-  Post,
-} from "https://denopkg.com/kyoh86/denops-docbase.vim@master/denops/docbase/types.ts";
-import { ensure } from "https://deno.land/x/unknownutil@v3.18.1/mod.ts";
+import { BaseFilter, type DduItem } from "jsr:@shougo/ddu-vim@5.0.0/types";
+import { isPost, type Post } from "jsr:@kyoh86/denops-docbase-vim@0.1.0/types";
+import { ensure } from "jsr:@core/unknownutil@3.18.1";
 
 type Params = {
   field: keyof Pick<
