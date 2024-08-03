@@ -1,9 +1,9 @@
-import type { GatherArguments } from "jsr:@shougo/ddu-vim@5.0.0/source";
-import type { ActionData as FileActionData } from "jsr:@shougo/ddu-kind-file@0.8.0";
-import type { Item } from "jsr:@shougo/ddu-vim@5.0.0/types";
-import { BaseSource } from "jsr:@shougo/ddu-vim@5.0.0/types";
-import { isPost, type Post } from "jsr:@kyoh86/denops-docbase-vim@0.1.0/types";
-import { ensure, is } from "jsr:@core/unknownutil@3.18.1";
+import type { GatherArguments } from "jsr:@shougo/ddu-vim@~5.0.0/source";
+import type { ActionData as FileActionData } from "jsr:@shougo/ddu-kind-file@~0.8.0";
+import type { Item } from "jsr:@shougo/ddu-vim@~5.0.0/types";
+import { BaseSource } from "jsr:@shougo/ddu-vim@~5.0.0/types";
+import { isPost, type Post } from "jsr:@kyoh86/denops-docbase-vim@~0.1.0/types";
+import { ensure, is } from "jsr:@core/unknownutil@~3.18.1";
 
 type ActionData = FileActionData & Post;
 
