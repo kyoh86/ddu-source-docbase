@@ -1,6 +1,6 @@
 import { BaseFilter, type DduItem } from "jsr:@shougo/ddu-vim@~5.0.0/types";
 import { isPost, type Post } from "jsr:@kyoh86/denops-docbase-vim@~0.1.0/types";
-import { ensure } from "jsr:@core/unknownutil@~4.0.0";
+import { ensure } from "jsr:@core/unknownutil@~4.1.0";
 
 type Params = {
   field: keyof Pick<
