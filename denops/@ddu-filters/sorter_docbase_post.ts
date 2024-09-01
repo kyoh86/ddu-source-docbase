@@ -1,4 +1,5 @@
-import { BaseFilter, type DduItem } from "jsr:@shougo/ddu-vim@~5.0.0/types";
+import type { DduItem } from "jsr:@shougo/ddu-vim@~6.0.0/types";
+import { BaseFilter } from "jsr:@shougo/ddu-vim@~6.0.0/filter";
 import { isPost, type Post } from "jsr:@kyoh86/denops-docbase-vim@~0.1.0/types";
 import { ensure } from "jsr:@core/unknownutil@~4.3.0";
 
