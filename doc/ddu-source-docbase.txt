@@ -10,12 +10,12 @@ URL: https://github.com/kyoh86/ddu-source-docbase
                                                  *ddu-source-docbase-contents*
 Contents ~
 
-Introduction				|ddu-source-docbase-introdution|
-Install					|ddu-source-docbase-install|
-Examples				|ddu-source-docbase-examples|
-Sources					|ddu-source-docbase-sources|
-Actions					|ddu-source-docbase-actions|
-About					|ddu-source-docbase-about|
+Introduction                |ddu-source-docbase-introdution|
+Install                     |ddu-source-docbase-install|
+Examples                    |ddu-source-docbase-examples|
+Sources                     |ddu-source-docbase-sources|
+Actions                     |ddu-source-docbase-actions|
+About                       |ddu-source-docbase-about|
 
 
 ==============================================================================
@@ -45,39 +45,179 @@ https://github.com/Shougo/ddu-kind-file
 Examples ~
 
 >
-	" Use docbase source.
-	call ddu#start({
-	    \   'sources': [{
-	    \     'name': 'docbase_posts',
-	    \     'params': { 'domain': 'kyoh86', 'query': 'foo' }
-	    \   }],
-	    \   'kindOptions': { 'file': { 'defaultAction': 'edit' } }
-	    \ })
+    " Use docbase source.
+    call ddu#start({
+        \   'sources': [{
+        \     'name': 'docbase_posts',
+        \     'params': { 'domain': 'kyoh86', 'query': 'foo' }
+        \   }],
+        \   'kindOptions': { 'file': { 'defaultAction': 'edit' } }
+        \ })
 <
 
 ==============================================================================
                                                   *ddu-source-docbase-sources*
 Sources ~
 
-docbase_teams
-	Team domains you logged in with denops-docbase.vim.
-
 docbase_posts
-	Posts in the DocBase. It accepts two parameters:
+    Posts in the DocBase. It accepts 4 parameters:
 
-	domain (string; required)
-		Your team domain in the DocBase.
+    {domain} (string; required)
+        Your team domain in the DocBase.
 
-	per_page (number)
-		Paging size.
-		Default: 100.
+    {per_page} (number)
+        Paging size.
+        Default: 100.
 
-	max_page (number)
-		Max searching pages.
-		Default: 5.
+    {max_page} (number)
+        Max searching pages.
+        Default: 5.
 
-	query (string)
-		Search query.
+    {query} (string)
+        Search query.
+
+    It generates items for a kind "file" with the path of the post.
+    The path is the formed for denops-docbase.vim.
+    And some fields from the post will be provided for each body.
+    It is the described in the |ddu-source-docbase-post-body|.
+
+
+docbase_templates
+    Templates in the DocBase. It accepts 3 parameters:
+
+    {domain} (string; required)
+        Your team domain in the DocBase.
+
+    {per_page} (number)
+        Paging size.
+        Default: 100.
+
+    {max_page} (number)
+        Max searching pages.
+        Default: 5.
+
+    It generates items for a kind "file" with the path of the post.
+    The path is the formed for denops-docbase.vim.
+    And some fields from the post will be provided for each body.
+    It is the described in the |ddu-source-docbase-post-body|.
+
+
+==============================================================================
+                                                *ddu-source-docbase-post-body*
+Post body ~
+
+The body of the post has the following fields:
+
+    {title} (string)
+        The title of the post.
+
+    {url} (string)
+        The URL of the post.
+
+    {body} (string)
+        The body of the post.
+
+    {draft} (boolean)
+        The draft status of the post.
+
+    {archived} (boolean)
+        The archived status of the post.
+
+    {created_at} (string)
+        The created date of the post.
+
+    {updated_at} (string)
+        The updated date of the post.
+
+    {scope} ("everyone" | "group" | "private" | null)
+        The scope of the post.
+
+    {tags} (list)
+        The tags of the post.
+
+    {sharing_url} (string | null)
+        The sharing URL of the post.
+
+    {representative_image_url} (string | null)
+        The representative image URL of the post.
+
+    {stars_count} (number)
+        The stars count of the post.
+
+    {good_jobs_count} (number)
+        The good jobs count of the post.
+
+    {user} (dict)
+        The user of the post.
+        It has the following fields:
+
+        {id} (number)
+            The ID of the user.
+
+        {name} (string)
+            The name of the user.
+
+        {profile_image_url} (string)
+            The profile image URL of the user.
+
+    {comments} (list)
+        The comments of the post.
+        Each comment has the following fields:
+
+        {id} (number)
+            The ID of the comment.
+
+        {body} (string)
+            The body of the comment.
+
+        {created_at} (string)
+            The created date of the comment.
+
+        {user} (dict)
+            The user of the comment.
+            It has the following fields:
+
+            {id} (number)
+                The ID of the user.
+
+            {name} (string)
+                The name of the user.
+
+            {profile_image_url} (string)
+                The profile image URL of the user.
+
+    {groups} (list)
+        The groups of the post.
+        Each group has the following fields:
+
+        {id} (number)
+            The ID of the group.
+
+        {name} (string)
+            The name of the group.
+
+    {attachments} (list)
+        The attachments of the post.
+        Each attachment has the following fields:
+
+        {id} (number)
+            The ID of the attachment.
+
+        {name} (string)
+            The name of the attachment.
+
+        {size} (number)
+            The size of the attachment.
+
+        {url} (string)
+            The URL of the attachment.
+
+        {markdown} (string)
+            The markdown of the attachment.
+
+        {created_at} (string)
+            The created date of the attachment.
+
 
 ==============================================================================
                                                 *ddu-source-docbase-actions*
@@ -88,4 +228,4 @@ You can see their actions in |ddu-kind-file-actions|.
 
 
 ==============================================================================
-vim:tw=78:ts=8:sw=8:ft=help:norl:noet:fen:
+" vim:tw=78:nosi:sts=4:ts=4:sw=4:et:ft=help:norl:
