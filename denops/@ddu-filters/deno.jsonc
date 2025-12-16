@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "@core/unknownutil": "jsr:@core/unknownutil@^4.3.0",
+    "@kyoh86/docbase": "jsr:@kyoh86/docbase@^3.0.0",
+    "@shougo/ddu-kind-file": "jsr:@shougo/ddu-kind-file@^1.0.0",
+    "@shougo/ddu-vim": "jsr:@shougo/ddu-vim@^11.1.0"
+  }
+}

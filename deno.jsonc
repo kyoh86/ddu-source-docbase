@@ -12,5 +12,16 @@
     "check": "deno check ./denops/**/*.ts",
     "lint": "deno lint",
     "test": "deno test --check --permit-no-files --allow-env=DENOPS_TEST_CONNECT_TIMEOUT,DENOPS_TEST_DENOPS_PATH,DENOPS_TEST_VERBOSE,DENOPS_TEST_VIM_EXECUTABLE,DENOPS_TEST_NVIM_EXECUTABLE,MSGPACKR_NATIVE_ACCELERATION_DISABLED --allow-run=vim,nvim --allow-net=127.0.0.1:0 --allow-read"
+  },
+  "lock": false,
+  "workspace": [
+    "./denops/@ddu-sources",
+    "./denops/@ddu-filters"
+  ],
+  "imports": {
+    "@core/unknownutil": "jsr:@core/unknownutil@^4.3.0",
+    "@kyoh86/docbase": "jsr:@kyoh86/docbase@^3.0.0",
+    "@shougo/ddu-kind-file": "jsr:@shougo/ddu-kind-file@^1.0.0",
+    "@shougo/ddu-vim": "jsr:@shougo/ddu-vim@^11.1.0"
   }
 }
