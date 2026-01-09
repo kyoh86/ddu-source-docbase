@@ -1,4 +1,7 @@
 {
+  "exports": {
+    ".": "main.ts"
+  },
   "imports": {
     "@core/unknownutil": "jsr:@core/unknownutil@^4.3.0",
     "@kyoh86/docbase": "jsr:@kyoh86/docbase@^3.0.0",
